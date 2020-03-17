@@ -3,7 +3,7 @@
 1. 属性和原型方法定义分离，降低可读性
 2. 原型成员可以被枚举
 3. 默认情况下，构造函数可以被当做普通函数使用
-```
+```js
 function Animal(name, age, sex){
     this.name = name;
     this.age = age;
@@ -31,7 +31,7 @@ print是在原型上，我们默认是不可以被枚举的，传统函数可以
 4. 类的所有方法内部都不可当做构造函数来使用
 5. 类的构造器必须使用new来调用
 
-```
+```js
 class Animal{
     constructor(name, age, sex){
         this.name = name;
@@ -46,9 +46,10 @@ class Animal{
 }
 ```
 ---
+
 ### 类的语法
 1. 可计算的成员名
-```
+```js
 const print = 'printName';
 class Animal{
     constructor(name, age, sex){
@@ -63,8 +64,9 @@ class Animal{
     }
 }
 ```
+
 2. getter 和 setter
-```
+```js
 class Animal{
     constructor(name, age, sex){
         this.name = name;
@@ -88,7 +90,7 @@ class Animal{
 
 
 3. 静态成员
-```
+```js
 class Animal{
    a = 1;
    b = 2;
@@ -102,7 +104,7 @@ console.log(A, Animal.c)
 1) 使用static的字段初始化器，添加的是静态成员，在Animal上
 2）未使用static的字段初始化器，添加的成员位于对象上
 3) 箭头函数在字段初始化器位置上，指向当前对象(每次new构造函数时候，都会新创建一个print，占用内存，使用频率少的可以使用)
-```
+```js
 class Test{
     constructor(a){
         this.a = 123;
@@ -115,7 +117,7 @@ class Test{
 
 5. 类表达式
 
-```
+```js
 const A = class {
     a = 1; 
     b = 2;
@@ -123,7 +125,7 @@ const A = class {
 ```
 ---
 ### 类的继承 extends
-```
+```js
 class Animal{
     constructor(type, name, age, sex){
         this.name = name;
@@ -152,7 +154,7 @@ class Dogs extends Animal{
 ```
 
 1. super
-```
+```js
 class Animal {
     constructor(type, name, age, sex) {
         this.name = name;
