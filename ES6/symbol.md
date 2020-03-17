@@ -14,7 +14,7 @@ const sym = Symbol();
     - ES6 Object.getOwnPropertySymbols 方法可以获取符号属性
 - 符号无法被隐式转换，因此不能被用于数学运算、字符串拼接或者其他隐时转换的场景，但符号可以显示的转换成字符串，通过String构造函数即可，console.log之所以能输出，是因为它在内部进行了显示转换
 
-```
+```js
 const sym = Symbol('这是一个对象的属性')
 const obj = {
     a : 1,
@@ -25,7 +25,7 @@ const obj = {
 
 ### 共享符号
  获取共享符号 Symbol.for()
-```
+```js
 const sym1 = Symbol.for();
 const sym2 = Symbol.for();
 console.log(sym1 === sym2) //true
